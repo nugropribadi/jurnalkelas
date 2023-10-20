@@ -23,17 +23,17 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         User::create([
-            'username' => 'x_rpl',
+            'username' => 'xrpl',
             'rombel_id' => 1,
             'role' => 'PJ',
             'jurusan_id' => 1,
-            'password' => 'XRPL'
+            'password' => 'xrpl'
         ]);
 
         User::create([
-            'username' => 'admin_jurnal',
+            'username' => 'jurnal',
             'role' => 'Admin',
-            'password' => 'admin_jurnal'
+            'password' => 'Jurnal40'
         ]);
 
         $this->call(RombelSeeder::class);

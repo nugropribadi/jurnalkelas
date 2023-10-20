@@ -17,13 +17,13 @@ class JurusanSeeder extends Seeder
             'name' => 'Rekayasa Perangkat Lunak',
         ]);
         Jurusan::create([
-            'name' => 'Multimedia',
+            'name' => 'Desain Komunikasi Visual',
         ]);
         Jurusan::create([
-            'name' => 'Bisnis Daring Pemasaran',
+            'name' => 'Bisnis Ritel',
         ]);
         Jurusan::create([
-            'name' => 'Otomatisasi Perkantoran',
+            'name' => 'Manajemen Perkantoran',
         ]);
         Jurusan::create([
             'name' => 'Akuntansi',

@@ -13,13 +13,13 @@ class AbsenSeeder extends Seeder
      */
     public function run() : void
     {
-        Absen::create([
-            'date' => '2023-10-15',
-            'rombel_id' => 1
-        ]);
-        Absen::create([
-            'date' => '2023-10-15',
-            'rombel_id' => 2
-        ]);
+        // Absen::create([
+        //     'date' => '2023-10-15',
+        //     'rombel_id' => 1
+        // ]);
+        // Absen::create([
+        //     'date' => '2023-10-15',
+        //     'rombel_id' => 2
+        // ]);
     }
 }

@@ -18,7 +18,7 @@ class MapelSeeder extends Seeder
             'jurusan_id' => 6
         ]);
         Mapel::create([
-            'mapel_name' => 'PKN',
+            'mapel_name' => 'Pendidikan Pancasila',
             'jurusan_id' => 6
         ]);
         Mapel::create([
