@@ -29,7 +29,7 @@ class JurusanSeeder extends Seeder
             'name' => 'Akuntansi',
         ]);
         Jurusan::create([
-            'name' => 'Umum',
+            'name' => 'Normatif',
         ]);
     }
 }
