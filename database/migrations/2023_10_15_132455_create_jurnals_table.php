@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('date', 200);
             $table->foreignId('jadwal_id')->nullable();
             $table->foreignId('rombel_id');
-            $table->string('kd', 200)->nullable();
+            $table->enum('kehadiran_guru', ['Hadir','Izin','Sakit','Dinas Luar'])->nullable();
             $table->string('material', 200)->nullable();
             $table->string('task', 200)->nullable();
             $table->integer('sakit')->nullable();

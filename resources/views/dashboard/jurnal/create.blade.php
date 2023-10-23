@@ -16,7 +16,7 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <div class="mb-4">
                                     <label for="date" class="form-label">Tanggal Jurnal</label>
                                     <input type="date" class="form-control @error('date') is-invalid @enderror"
@@ -28,7 +28,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <div class="mb-4">
                                     <label for="jadwal_id" class="form-label">Jadwal</label>
                                     <select class="form-select @error('jadwal_id') is-invalid @enderror"
@@ -49,17 +49,17 @@
                                     @enderror
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="mb-4">
-                                <label for="kd" class="form-label">KD/CP</label>
-                                <input type="text" name="kd" class="form-control @error('kd') is-invalid @enderror"
-                                    value="{{ old('kd') }}" id="kd">
-                                @error('kd')
-                                    <p class="invalid" style="color: red">
-                                        {{ $message }}
-                                    </p>
-                                @enderror
+                            <div class="col-lg-4">
+                                <div class="mb-4">
+                                    <label for="kehadiran_guru" class="form-label">Kehadiran Guru</label>
+                                    <select class="form-select"
+                                        aria-label="Default select example" id="kehadiran_guru" name="kehadiran_guru">
+                                        <option value="Hadir" selected>Hadir</option>
+                                        <option value="Izin">Izin</option>
+                                        <option value="Sakit">Sakit</option>
+                                        <option value="Dinas Luar">Dinas Luar</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="row">

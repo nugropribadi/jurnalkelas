@@ -25,13 +25,13 @@ class JurnalController extends Controller
             ->join('rombels', 'rombels.id', '=', 'jurnals.rombel_id')
             ->join('mapels', 'mapels.id', '=', 'jadwals.mapel_id')
             ->where('jurnals.rombel_id', auth()->user()->rombel_id)
-            ->get(['jurnals.date', 'teachers.teacher_name', 'mapels.mapel_name', 'jurnals.kd', 'jurnals.date', 'jurnals.material', 'jurnals.task', 'jurnals.sakit', 'jurnals.izin', 'jurnals.alpha', 'jurnals.hadir', 'jurnals.detail', 'jurnals.id', 'rombels.name']);
+            ->get(['jurnals.date', 'teachers.teacher_name', 'mapels.mapel_name', 'jurnals.kehadiran_guru', 'jurnals.date', 'jurnals.material', 'jurnals.task', 'jurnals.sakit', 'jurnals.izin', 'jurnals.alpha', 'jurnals.hadir', 'jurnals.detail', 'jurnals.id', 'rombels.name']);
 
         $data1 = Jurnal::join('jadwals', 'jadwals.id', '=', 'jurnals.jadwal_id')
             ->join('teachers', 'teachers.id', '=', 'jadwals.teacher_id')
             ->join('mapels', 'mapels.id', '=', 'jadwals.mapel_id')
             ->join('rombels', 'rombels.id', '=', 'jurnals.rombel_id')
-            ->get(['jurnals.date', 'teachers.teacher_name', 'mapels.mapel_name', 'jurnals.kd', 'jurnals.date', 'jurnals.material', 'jurnals.task', 'jurnals.sakit', 'jurnals.izin', 'jurnals.alpha', 'jurnals.hadir', 'jurnals.detail', 'jurnals.id', 'rombels.name']);
+            ->get(['jurnals.date', 'teachers.teacher_name', 'mapels.mapel_name', 'jurnals.kehadiran_guru', 'jurnals.date', 'jurnals.material', 'jurnals.task', 'jurnals.sakit', 'jurnals.izin', 'jurnals.alpha', 'jurnals.hadir', 'jurnals.detail', 'jurnals.id', 'rombels.name']);
         return view('dashboard.jurnal.index', [
             // 'jurnals' => Jurnal::where('rombel_id', auth()->user()->rombel_id)->get(),
             'jurnals' => $data,
@@ -62,7 +62,7 @@ class JurnalController extends Controller
             'date' => ['required', 'max:100'],
             'jadwal_id' => ['required'],
             'rombel_id' => ['required'],
-            'kd' => ['nullable'],
+            'kehadiran_guru' => ['nullable'],
             'material' => ['nullable'],
             'task' => ['nullable'],
             'sakit' => ['nullable'],
@@ -86,7 +86,7 @@ class JurnalController extends Controller
         //     ->join('mapels', 'mapels.id', '=', 'jadwals.mapel_id')
         //     ->join('rombels', 'rombels.id', '=', 'jadwals.rombel_id')
         //     ->where('id', $jurnal->id)
-        //     ->get(['jurnals.date', 'teachers.teacher_name', 'mapels.mapel_name', 'jurnals.kd', 'jurnals.date', 'jurnals.material', 'jurnals.task', 'jurnals.sakit', 'jurnals.izin', 'jurnals.alpha', 'jurnals.hadir', 'jurnals.detail', 'jurnals.id']);
+        //     ->get(['jurnals.date', 'teachers.teacher_name', 'mapels.mapel_name', 'jurnals.kehadiran_guru', 'jurnals.date', 'jurnals.material', 'jurnals.task', 'jurnals.sakit', 'jurnals.izin', 'jurnals.alpha', 'jurnals.hadir', 'jurnals.detail', 'jurnals.id']);
         // return view('dashboard.jurnal.show', [
         //     'title' => $this->title,
         //     'jurnal' => $data
@@ -115,7 +115,7 @@ class JurnalController extends Controller
         $validatedData = $request->validate([
             'date' => ['required', 'max:100'],
             'jadwal_id' => ['required'],
-            'kd' => ['required'],
+            'kehadiran_guru' => ['required'],
             'material' => ['required'],
             'task' => ['required'],
             'sakit' => ['nullable'],

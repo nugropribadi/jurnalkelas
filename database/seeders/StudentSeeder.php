@@ -13,13 +13,13 @@ class StudentSeeder extends Seeder
      */
     public function run() : void
     {
-        // Student::create([
-        //     'nis' => '20210811',
-        //     'full_name' => 'ADELIA HARNI',
-        //     'tahun_ajaran' => '2022/2023',
-        //     'rombel_id' => 1,
-        //     'jurusan_id' => 1
-        // ]);
+        Student::create([
+            'nis' => '20210811',
+            'full_name' => 'ADELIA HARNI',
+            'tahun_ajaran' => '2022/2023',
+            'rombel_id' => 1,
+            'jurusan_id' => 1
+        ]);
         // Student::create([
         //     'nis' => '20210812',
         //     'tahun_ajaran' => '2022/2023',

@@ -60,7 +60,7 @@
                                             <h6 class="fw-semibold mb-0">Mapel</h6>
                                         </th>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">KD/CP</h6>
+                                            <h6 class="fw-semibold mb-0">Kehadiran Guru</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Materi</h6>
@@ -102,7 +102,7 @@
                                                     <h6 class="fw-semibold mb-0">{{ $jurnal->mapel_name }}</h6>
                                                 </td>
                                                 <td class="border-bottom-0">
-                                                    <h6 class="fw-semibold mb-0">{{ $jurnal->kd }}</h6>
+                                                    <h6 class="fw-semibold mb-0">{{ $jurnal->kehadiran_guru }}</h6>
                                                 </td>
                                                 <td class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">{{ $jurnal->material }}</h6>
@@ -176,7 +176,7 @@
                                                     <h6 class="fw-semibold mb-0">{{ $jurnal->mapel_name }}</h6>
                                                 </td>
                                                 <td class="border-bottom-0">
-                                                    <h6 class="fw-semibold mb-0">{{ $jurnal->kd }}</h6>
+                                                    <h6 class="fw-semibold mb-0">{{ $jurnal->kehadiran_guru }}</h6>
                                                 </td>
                                                 <td class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">{{ $jurnal->material }}</h6>
