@@ -63,6 +63,12 @@
                                             <h6 class="fw-semibold mb-0">Kehadiran Guru</h6>
                                         </th>
                                         <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Mulai Jam Ke</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Selesai Jam Ke</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Materi</h6>
                                         </th>
                                         <th class="border-bottom-0">
@@ -108,6 +114,12 @@
                                                     </span>
                                                 </td>
                                                 <td class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-1">{{ $jurnal->start }}</h6>
+                                                </td>
+                                                <td class="border-bottom-0">
+                                                    <h6 class="fw-semibold mb-1">{{ $jurnal->finish }}</h6>
+                                                </td>
+                                                <td class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">{{ $jurnal->material }}</h6>
                                                 </td>
                                                 <td class="border-bottom-0">
@@ -118,7 +130,7 @@
                                                         @if ($jurnal->sakit > 0)
                                                             {{ $jurnal->sakit }}
                                                         @else
-                                                            Tidak ada
+                                                            0
                                                         @endif
                                                     </span>
                                                 </td>
@@ -127,7 +139,7 @@
                                                         @if ($jurnal->izin > 0)
                                                             {{ $jurnal->izin }}
                                                         @else
-                                                            Tidak ada
+                                                            0
                                                         @endif
                                                     </span>
                                                 </td>
@@ -136,7 +148,7 @@
                                                         @if ($jurnal->alpha > 0)
                                                             {{ $jurnal->alpha }}
                                                         @else
-                                                            Tidak ada
+                                                            0
                                                         @endif
                                                     </span>
                                                 </td>

@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('main')
-    <h1>
-        Daftar Absensi</h1>
+
+
+    <h1>Daftar Absensi</h1>
+
+       
     @if (auth()->user()->role === 'PJ')
         <div class="row">
             <div class="col-md-2">
@@ -87,7 +90,7 @@
                                                     @if ($absen->hadir > 0)
                                                         {{ $absen->hadir }}
                                                     @else
-                                                        Tidak ada
+                                                        0
                                                     @endif
                                                 </span>
                                             </td>
@@ -96,7 +99,7 @@
                                                     @if ($absen->izin > 0)
                                                         {{ $absen->izin }}
                                                     @else
-                                                        Tidak ada
+                                                        0
                                                     @endif
                                                 </span>
                                             </td>
@@ -105,7 +108,7 @@
                                                     @if ($absen->sakit > 0)
                                                         {{ $absen->sakit }}
                                                     @else
-                                                        Tidak ada
+                                                        0
                                                     @endif
                                                 </span>
                                             </td>
@@ -114,7 +117,7 @@
                                                     @if ($absen->alpha > 0)
                                                         {{ $absen->alpha }}
                                                     @else
-                                                        Tidak ada
+                                                        0
                                                     @endif
                                                 </span>
                                             </td>
