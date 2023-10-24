@@ -102,7 +102,10 @@
                                                     <h6 class="fw-semibold mb-0">{{ $jurnal->mapel_name }}</h6>
                                                 </td>
                                                 <td class="border-bottom-0">
-                                                    <h6 class="fw-semibold mb-0">{{ $jurnal->kehadiran_guru }}</h6>
+                                                    <span 
+                                                    @if ($jurnal->kehadiran_guru === 'Hadir') class="badge bg-success rounded-3 fw-semibold" @else class="badge bg-danger rounded-3 fw-semibold" @endif>
+                                                        {{ $jurnal->kehadiran_guru }}
+                                                    </span>
                                                 </td>
                                                 <td class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">{{ $jurnal->material }}</h6>
@@ -111,31 +114,31 @@
                                                     <h6 class="fw-semibold mb-0">{{ $jurnal->task }}</h6>
                                                 </td>
                                                 <td class="border-bottom-0">
-                                                    <h6 class="fw-semibold mb-0">
+                                                    <span class="badge bg-warning rounded-3 fw-semibold">
                                                         @if ($jurnal->sakit > 0)
                                                             {{ $jurnal->sakit }}
                                                         @else
                                                             Tidak ada
                                                         @endif
-                                                    </h6>
+                                                    </span>
                                                 </td>
                                                 <td class="border-bottom-0">
-                                                    <h6 class="fw-semibold mb-0">
+                                                    <span class="badge bg-warning rounded-3 fw-semibold">
                                                         @if ($jurnal->izin > 0)
                                                             {{ $jurnal->izin }}
                                                         @else
                                                             Tidak ada
                                                         @endif
-                                                    </h6>
+                                                    </span>
                                                 </td>
                                                 <td class="border-bottom-0">
-                                                    <h6 class="fw-semibold mb-0">
+                                                    <span class="badge bg-danger rounded-3 fw-semibold">
                                                         @if ($jurnal->alpha > 0)
                                                             {{ $jurnal->alpha }}
                                                         @else
                                                             Tidak ada
                                                         @endif
-                                                    </h6>
+                                                    </span>
                                                 </td>
                                                 <td class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-0">{{ $jurnal->detail }}</h6>

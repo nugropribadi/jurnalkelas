@@ -83,40 +83,40 @@
                                                 <h6 class="fw-semibold mb-1">{{ $absen->date }}</h6>
                                             </td>
                                             <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1">
+                                                <span class="badge bg-success rounded-3 fw-semibold">
                                                     @if ($absen->hadir > 0)
                                                         {{ $absen->hadir }}
                                                     @else
                                                         Tidak ada
                                                     @endif
-                                                </h6>
+                                                </span>
                                             </td>
                                             <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1">
+                                                <span class="badge bg-warning rounded-3 fw-semibold">
                                                     @if ($absen->izin > 0)
                                                         {{ $absen->izin }}
                                                     @else
                                                         Tidak ada
                                                     @endif
-                                                </h6>
+                                                </span>
                                             </td>
                                             <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1">
+                                                <span class="badge bg-warning rounded-3 fw-semibold">
                                                     @if ($absen->sakit > 0)
                                                         {{ $absen->sakit }}
                                                     @else
                                                         Tidak ada
                                                     @endif
-                                                </h6>
+                                                </span>
                                             </td>
                                             <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1">
+                                                <span class="badge bg-danger rounded-3 fw-semibold">
                                                     @if ($absen->alpha > 0)
                                                         {{ $absen->alpha }}
                                                     @else
                                                         Tidak ada
                                                     @endif
-                                                </h6>
+                                                </span>
                                             </td>
                                             <td class="border-bottom-0">
                                                 <form action="/dashboard/absen/{{ $absen->id }}" method="post"
