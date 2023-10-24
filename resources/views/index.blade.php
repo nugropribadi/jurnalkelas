@@ -73,6 +73,9 @@
                                     <button class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" name="login"
                                         type="submit">Masuk</button>
                                 </form>
+                                <div class="card-footer text-muted text-center">
+                                    Created By Najwa Latifah - XII RPL
+                                  </div>
                             </div>
                         </div>
                     </div>
@@ -80,9 +83,7 @@
             </div>
         </div>
     </div>
-    <div class="card-footer text-muted">
-        Created By Najwa Latifah (XII RPL)
-      </div>
+  
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
