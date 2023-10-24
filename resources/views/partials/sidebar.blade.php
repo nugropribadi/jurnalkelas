@@ -81,6 +81,9 @@
                                     <span class="hide-menu">Jurnal Harian</span>
                                 </a>
                             </li>
+                            <div class="card-footer text-center mt-3">
+                                Created By Najwa Latifah - XII RPL
+                            </div>
                         @endif
 
                         {{-- admin --}}
@@ -145,6 +148,9 @@
                                     <span class="hide-menu">Jurnal Harian</span>
                                 </a>
                             </li>
+                            <div class="card-footer text-center mt-3">
+                                Created By Najwa Latifah - XII RPL
+                            </div>
                         @endif
                     </ul>
                 </nav>

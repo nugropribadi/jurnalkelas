@@ -34,45 +34,49 @@
                             <table class="table text-nowrap mb-0 align-middle table-hover display" id="myTable">
                                 <thead class="text-dark fs-4">
                                     <tr>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0 align-middle" rowspan="2">
                                             <h6 class="fw-semibold mb-0">Tanggal</h6>
                                         </th>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0 align-middle" rowspan="2">
                                             <h6 class="fw-semibold mb-0">Kelas</h6>
                                         </th>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0 align-middle" rowspan="2">
                                             <h6 class="fw-semibold mb-0">Nama Guru</h6>
                                         </th>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0 align-middle" rowspan="2">
                                             <h6 class="fw-semibold mb-0">Mapel</h6>
                                         </th>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0 align-middle" rowspan="2">
                                             <h6 class="fw-semibold mb-0">Kehadiran Guru</h6>
                                         </th>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0 align-middle" rowspan="2">
                                             <h6 class="fw-semibold mb-0">Mulai Jam Ke</h6>
                                         </th>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0 align-middle" rowspan="2">
                                             <h6 class="fw-semibold mb-0">Selesai Jam Ke</h6>
                                         </th>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0 align-middle" rowspan="2">
                                             <h6 class="fw-semibold mb-0">Materi</h6>
                                         </th>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0 align-middle" rowspan="2">
                                             <h6 class="fw-semibold mb-0">Tugas</h6>
                                         </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">S</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">I</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">A</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0 align-middle" colspan="3">
+                                            <h6 class="fw-semibold mb-0">Kehadiran Siswa</h6>
+                                        <th class="border-bottom-0 align-middle" rowspan="2">
                                             <h6 class="fw-semibold mb-0">Keterangan</h6>
                                         </th>
+                                    </tr>
+                                    <tr>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">S</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">I</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">A</h6>
+                                    </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -99,10 +103,10 @@
                                             
                                             </td>
                                             <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1">{{ $jurnal->start }}</h6>
+                                                <h6 class="fw-semibold mb-1 text-center">{{ $jurnal->start }}</h6>
                                             </td>
                                             <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1">{{ $jurnal->finish }}</h6>
+                                                <h6 class="fw-semibold mb-1 text-center">{{ $jurnal->finish }}</h6>
                                             </td>
                                             <td class="border-bottom-0">
                                                 <h6 class="fw-semibold mb-0">{{ $jurnal->material }}</h6>
@@ -150,13 +154,13 @@
                                     @endforelse
                                 </tbody>
                             </table>
-                            <div class="card-footer text-muted text-center">
-                                Created By Najwa Latifah - XII RPL
-                              </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="card-footer text-center">
+            Created By Najwa Latifah - XII RPL
         </div>
     </div>
 @endsection
