@@ -150,6 +150,9 @@
                                     @endforelse
                                 </tbody>
                             </table>
+                            <div class="card-footer text-muted text-center">
+                                Created By Najwa Latifah - XII RPL
+                              </div>
                         </div>
                     </div>
                 </div>
