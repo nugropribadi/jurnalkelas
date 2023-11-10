@@ -24,7 +24,8 @@ class DashboardController extends Controller
             ->join('teachers', 'teachers.id', '=', 'jadwals.teacher_id')
             ->join('mapels', 'mapels.id', '=', 'jadwals.mapel_id')
             ->join('rombels', 'rombels.id', '=', 'jurnals.rombel_id')
-            ->get(['jurnals.date', 'teachers.teacher_name', 'mapels.mapel_name', 'jurnals.kehadiran_guru', 'jurnals.date', 'jurnals.material', 'jurnals.task', 'jurnals.sakit', 'jurnals.izin', 'jurnals.alpha', 'jurnals.hadir', 'jurnals.detail', 'jurnals.id', 'rombels.name', 'jadwals.start','jadwals.finish']);
+            ->orderBy('jurnals.date', 'desc')
+            ->get(['jurnals.date', 'teachers.teacher_name', 'mapels.mapel_name', 'jurnals.kehadiran_guru', 'jurnals.date', 'jurnals.material', 'jurnals.task', 'jurnals.sakit', 'jurnals.izin', 'jurnals.alpha', 'jurnals.hadir', 'jurnals.detail', 'jurnals.id', 'rombels.name', 'jadwals.start', 'jadwals.finish']);
         return view('dashboard', [
             // 'jurnals' => Jurnal::where('rombel_id', auth()->user()->rombel_id)->get(),
             'data' => $data1,

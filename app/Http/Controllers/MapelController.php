@@ -19,7 +19,7 @@ class MapelController extends Controller
     {
         return view('dashboard.mapel.index', [
             'all_mapels' => Mapel::all(),
-            'mapels' => Mapel::where('jurusan_id', auth()->user()->jurusan_id)->orWhere('jurusan_id', 6)->get(),
+            'mapels' => Mapel::where('jurusan_id', auth()->user()->jurusan_id)->orWhere('jurusan_id', 6)->orderBy('jurusan_id', 'asc')->get(),
             'title' => $this->title
         ]);
     }

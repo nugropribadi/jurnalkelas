@@ -20,7 +20,7 @@ class StudentController extends Controller
     public function index()
     {
         return view('dashboard.siswa.index', [
-            'students' => Student::where('rombel_id', auth()->user()->rombel_id)->get(),
+            'students' => Student::where('rombel_id', auth()->user()->rombel_id)->orderBy('full_name', 'asc')->get(),
             'all_students' => Student::all(),
             'title' => $this->title
         ]);

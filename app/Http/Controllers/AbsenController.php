@@ -25,7 +25,7 @@ class AbsenController extends Controller
         // ]);
         // return $dataCount->count();
         return view('dashboard.absen.index', [
-            'absens' => Absen::where('rombel_id', auth()->user()->rombel_id)->get(),
+            'absens' => Absen::where('rombel_id', auth()->user()->rombel_id)->orderBy('date', 'desc')->get(),
             'title' => $this->title
         ]);
     }

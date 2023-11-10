@@ -23,7 +23,7 @@ class TeacherController extends Controller
         return view('dashboard.guru.index', [
             'all_teachers' => Teacher::all(),
             'teachers' => Teacher::where('jurusan_id', auth()->user()->jurusan_id)
-                ->orWhere('jurusan_id', 6)->get(),
+                ->orWhere('jurusan_id', 6)->orderBy('teacher_name', 'asc')->get(),
             'title' => $this->title
         ]);
     }
