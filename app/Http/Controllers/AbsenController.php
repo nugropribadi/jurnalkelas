@@ -59,8 +59,6 @@ class AbsenController extends Controller
         }
 
         return redirect('/dashboard/absen/')->with('success', "Data absen berhasil ditambahkan!");
-
-
     }
 
     /**
@@ -128,33 +126,37 @@ class AbsenController extends Controller
         }
         $hadirCount = AbsenDetail::where([
             ['attendance', '=', 'Hadir'],
-            ['date_detail', '=', $absen->date]
+            ['date_detail', '=', $absen->date],
+            ['rombel_id', '=', $request->rombel_id[$key]]
         ])->count();
 
         $izinCount = AbsenDetail::where([
             ['attendance', '=', 'Izin'],
-            ['date_detail', '=', $absen->date]
+            ['date_detail', '=', $absen->date],
+            ['rombel_id', '=', $request->rombel_id[$key]]
         ])->count();
 
         $sakitCount = AbsenDetail::where([
             ['attendance', '=', 'Sakit'],
-            ['date_detail', '=', $absen->date]
+            ['date_detail', '=', $absen->date],
+            ['rombel_id', '=', $request->rombel_id[$key]]
         ])->count();
 
         $alphaCount = AbsenDetail::where([
             ['attendance', '=', 'Alpha'],
-            ['date_detail', '=', $absen->date]
+            ['date_detail', '=', $absen->date],
+            ['rombel_id', '=', $request->rombel_id[$key]]
         ])->count();
 
         Absen::where([
             ['date', '=', $absen->date],
             ['rombel_id', '=', $absen->rombel_id]
         ])->update([
-                    'hadir' => $hadirCount,
-                    'izin' => $izinCount,
-                    'sakit' => $sakitCount,
-                    'alpha' => $alphaCount
-                ]);
+            'hadir' => $hadirCount,
+            'izin' => $izinCount,
+            'sakit' => $sakitCount,
+            'alpha' => $alphaCount
+        ]);
         // return $hadirCount->count();
         return redirect('/dashboard/absen/')->with('successEdit', "Data absen berhasil diperbarui!");
     }
